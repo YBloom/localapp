@@ -1,9 +1,12 @@
 {
-  "name": "localapp",
+  "name": "@yaobii/localapp",
   "version": "0.1.0",
   "type": "module",
   "bin": {
     "localapp": "dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist"

@@ -6,7 +6,7 @@
 
 一次调用,告诉你 **localhost 上运行着什么、属于哪个项目、是否存活** — 消失了也能重新唤回。
 
-[![npm version](https://img.shields.io/npm/v/localapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/localapp)
+[![npm version](https://img.shields.io/npm/v/%40yaobii%2Flocalapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/@yaobii/localapp)
 [![node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![platform](https://img.shields.io/badge/platform-macOS-000000?logo=apple)](#install)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
@@ -57,9 +57,9 @@ PORT   PROJECT   STATUS      URL                     NOTE
 ## 快速开始
 
 ```bash
-npm install -g localapp
+npm install -g @yaobii/localapp
 # 或者无需安装直接运行：
-npx localapp ls
+npx @yaobii/localapp ls
 ```
 
 需要 **macOS** 和 **Node 20+**。

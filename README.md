@@ -6,7 +6,7 @@
 
 One call tells you **what's running on localhost, whose it is, and whether it's alive** — and reopens it when it's gone.
 
-[![npm version](https://img.shields.io/npm/v/localapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/localapp)
+[![npm version](https://img.shields.io/npm/v/%40yaobii%2Flocalapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/@yaobii/localapp)
 [![node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![platform](https://img.shields.io/badge/platform-macOS-000000?logo=apple)](#install)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
@@ -57,9 +57,9 @@ Today an agent answers *"what's running?"* with a `lsof + ps + grep + curl` loop
 ## Quick start
 
 ```bash
-npm install -g localapp
+npm install -g @yaobii/localapp
 # or run without installing:
-npx localapp ls
+npx @yaobii/localapp ls
 ```
 
 Requires **macOS** and **Node 20+**.
