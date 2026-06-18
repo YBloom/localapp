@@ -1,6 +1,6 @@
 {
   "name": "@yaobii/localapp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Open any local webtool with one command — vibe-coded artifacts, dev servers, agent-built scripts. macOS CLI, agent-native.",
   "keywords": [
     "localhost",
