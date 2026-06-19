@@ -137,6 +137,10 @@ Run `localapp <command> --help` for per-command options.
 - **Not an AI app builder.**
 - **Not a daemon or process supervisor.** It reads live runtime state on demand and sends nothing off your machine. Reading is less invasive than intercepting.
 
+## Community
+
+LocalApp recognizes and supports the [LINUX DO](https://linux.do) community.
+
 ## License
 
 [MIT](./LICENSE) © YBloom
