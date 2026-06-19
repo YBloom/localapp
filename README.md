@@ -28,10 +28,10 @@ Requires **macOS** and **Node 20+**.
 
 ## Why you want this
 
-- **Open any local webtool with one command.** LocalApp remembers the command and directory, so `localapp run notes-export` brings the tool back weeks later.
-- **Connect coding agents automatically.** `localapp setup` teaches Claude Code and Codex to inspect LocalApp first, launch through it, and reuse a healthy server.
-- **Hand live services between agents.** Every agent sees the same project, port, URL, and whether the service is still running—instead of starting its own copy.
-- **Keep localhost understandable as agents come and go.** LocalApp adds project meaning to live system data while leaving your scripts and environment under your control.
+- ↩️ **Open any local webtool with one command.** LocalApp remembers the command and directory, so `localapp run notes-export` brings the tool back weeks later.
+- 🤖 **Connect coding agents automatically.** `localapp setup` teaches Claude Code and Codex to inspect LocalApp first, launch through it, and reuse a healthy server.
+- 🤝 **Hand live services between agents.** Every agent sees the same project, port, URL, and whether the service is still running—instead of starting its own copy.
+- 🧭 **Keep localhost understandable as agents come and go.** LocalApp adds project meaning to live system data while leaving your scripts and environment under your control.
 
 ## The problem
 

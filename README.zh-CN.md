@@ -28,10 +28,10 @@ npx @yaobii/localapp ls
 
 ## 你为什么需要它
 
-- **一行命令打开任何本机网页工具。** LocalApp 记住启动命令和目录；几周后运行 `localapp run notes-export`，工具就会回来。
-- **自动接入 coding agent。** `localapp setup` 会让 Claude Code 和 Codex 先查 LocalApp、通过它启动服务，并复用健康实例。
-- **让多个 agent 接力同一个服务。** 每个 agent 都能看到同一个项目、端口、URL，以及服务是否还活着，不再各开一份。
-- **换了 agent，localhost 仍然看得懂。** LocalApp 给实时系统数据补上项目含义，但脚本和环境仍由你掌控。
+- ↩️ **一行命令打开任何本机网页工具。** LocalApp 记住启动命令和目录；几周后运行 `localapp run notes-export`，工具就会回来。
+- 🤖 **自动接入 coding agent。** `localapp setup` 会让 Claude Code 和 Codex 先查 LocalApp、通过它启动服务，并复用健康实例。
+- 🤝 **让多个 agent 接力同一个服务。** 每个 agent 都能看到同一个项目、端口、URL，以及服务是否还活着，不再各开一份。
+- 🧭 **换了 agent，localhost 仍然看得懂。** LocalApp 给实时系统数据补上项目含义，但脚本和环境仍由你掌控。
 
 ## 问题所在
 
