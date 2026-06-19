@@ -2,13 +2,11 @@
 
 # localapp
 
-### 一行命令，打开你做过的任何本机网页工具。
-
-*你 vibe 出来的小工具、所有的 dev server、agent 顺手写的脚本——都被记住，都能被再次打开。Mac 上的"启动台"，给你的本机 artifact 用。*
+### 看清 Mac 上跑着哪些网页工具，按名字重新打开任何一个。
 
 [![npm version](https://img.shields.io/npm/v/%40yaobii%2Flocalapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/@yaobii/localapp)
 [![node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org)
-[![platform](https://img.shields.io/badge/platform-macOS-000000?logo=apple)](#install)
+[![platform](https://img.shields.io/badge/platform-macOS-000000?logo=apple)](#快速开始)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yaobii-lab/localapp/issues)
 
@@ -16,27 +14,17 @@
 
 </div>
 
-```text
-$ localapp ls
+![LocalApp 列出本机网页工具，并按名字重新打开其中一个](./assets/readme/terminal-demo.gif)
 
-Running
-PORT   PROJECT         STATUS     URL                    STARTED   NOTE
-5173   localapp-web    ● running  http://localhost:5173  2h ago    localapp 网页
-5174   localapp-web    ● running  http://localhost:5174  10m ago   (duplicate)
+## 快速开始
 
-Not running
-PORT   PROJECT          STATUS     URL  LAST SEEN     NOTE
-—      个人记忆库       ○ stopped  —    yesterday     我的个人记忆库     (kept)
-—      抢票             ○ stopped  —    3 days ago    春运 G1234 监控    (kept)
-—      评论聚类看板     ○ stopped  —    last week     评论看板           (kept)
-
-$ localapp run 记忆
-✓ 个人记忆库 alive at http://localhost:3217
+```bash
+npm install -g @yaobii/localapp
+# 或者无需安装直接运行：
+npx @yaobii/localapp ls
 ```
 
-> 一行 `ls` 看清所有跑过和还活着的；一行 `run <名字>`（或 alias `open`）把任何被忘掉的 artifact 拉回来。加上 `--json`，coding agent 读到的也是同一张表。
-
----
+需要 **macOS** 和 **Node 20+**。
 
 ## 你为什么需要它
 
@@ -54,22 +42,6 @@ $ localapp run 记忆
 这是同一个问题的两个速度：**进程还活着，但它的意义已经蒸发了**——shell 关了，上下文被压缩了，你的脑子也已经走开。`5173` 退化成一个没人敢动的无意义数字；那个周日做的小工具，退化成一个找不到的文件夹。
 
 现在，agent 回答“在跑什么？”要走一遍 `lsof + ps + grep + curl`——多次调用，最终还是猜。localapp 用**一次调用**返回已解析的答案：端口 → 项目 → 来源 → 存活状态，语义已随数据附带。而 `localapp open <名字>` 能把任何被遗忘的工具重新打开。
-
-## 快速开始
-
-```bash
-npm install -g @yaobii/localapp
-# 或者无需安装直接运行：
-npx @yaobii/localapp ls
-```
-
-需要 **macOS** 和 **Node 20+**。
-
-```bash
-localapp ls            # 查看当前项目的服务
-localapp ls --all      # 查看这台 Mac 上的所有服务
-localapp ls --json     # 让 coding agent 读取同一份结果
-```
 
 ## 接入 coding agent
 
@@ -112,10 +84,10 @@ localapp run 记忆               # 模糊匹配货架上的所有服务
 你上周末 vibe 出来一个本机小工具，现在不想立刻跑——但两周后你还想再用它一次，那时你已经记不清它放在哪个文件夹了：
 
 ```bash
-cd ~/projects/memory-archive
-localapp add --note "我的个人记忆库" -- uv run app.py
-# ✓ added memory-archive to shelf
-# 再次打开：localapp run memory-archive
+cd ~/projects/notes-app
+localapp add --note "会议记录" -- npm run dev
+# ✓ added notes-app to shelf
+# 再次打开：localapp run notes-app
 ```
 
 `add` 记下启动命令、目录、分支和备注，但不启动任何进程。下次运行 `localapp ls`，它会出现在“未运行”一组，等你再次打开。

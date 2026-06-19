@@ -2,9 +2,7 @@
 
 # localapp
 
-### Open any local webtool with one command.
-
-*LaunchPad for the vibe-coded artifacts on your Mac — every dev server, every agent-built script, remembered and re-openable.*
+### See every local web app running on your Mac. Reopen any one by name.
 
 [![npm version](https://img.shields.io/npm/v/%40yaobii%2Flocalapp?color=cb3837&logo=npm)](https://www.npmjs.com/package/@yaobii/localapp)
 [![node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org)
@@ -14,31 +12,9 @@
 
 **English** · [简体中文](./README.zh-CN.md)
 
-_macOS · Node 20+ · open source._
-
 </div>
 
-```text
-$ localapp ls
-
-Running
-PORT   PROJECT        STATUS     URL                    STARTED   NOTE
-5173   localapp-web   ● running  http://localhost:5173  2h ago    localapp homepage
-5174   localapp-web   ● running  http://localhost:5174  10m ago   (duplicate)
-
-Not running
-PORT   PROJECT         STATUS     URL  LAST SEEN     NOTE
-—      memory-archive  ○ stopped  —    yesterday     personal memory archive   (kept)
-—      ticket-grab     ○ stopped  —    3 days ago    monitoring G1234           (kept)
-—      comment-board   ○ stopped  —    last week     comment cluster board      (kept)
-
-$ localapp run memory
-✓ memory-archive alive at http://localhost:3217
-```
-
-> One call lists everything you've ever run; one more wakes any of them back up. `localapp run <name>` (or its alias `localapp open <name>`) resurrects forgotten artifacts. Add `--json` and a coding agent reads the same table.
-
----
+![LocalApp lists local web tools and reopens one by name](./assets/readme/terminal-demo.gif)
 
 ## Install
 
@@ -109,10 +85,10 @@ localapp run memory               # fuzzy match against everything on your shelf
 You vibe-coded a tool last Sunday and don't want to start it right now — but in two weeks you'll want to use it again, and you'll have forgotten what folder it lives in:
 
 ```bash
-cd ~/projects/memory-archive
-localapp add --note "personal memory archive" -- uv run app.py
-# ✓ added memory-archive to shelf
-# Open with: localapp run memory-archive
+cd ~/projects/notes-app
+localapp add --note "meeting notes" -- npm run dev
+# ✓ added notes-app to shelf
+# Open with: localapp run notes-app
 ```
 
 `add` records the recipe (command + cwd + branch + note) without spawning anything. The next `localapp ls` shows it under *Not running*, ready to be brought back up.
